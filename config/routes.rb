@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
-  resources :powers, only: [:index]
-  resources :heroines, only: [:index]  
+  get 'heroinepowers/new'
+
+  get 'heroinepowers/create'
+
+  resources :powers
+  resources :heroines 
+  resources :heroinepowers 
 end

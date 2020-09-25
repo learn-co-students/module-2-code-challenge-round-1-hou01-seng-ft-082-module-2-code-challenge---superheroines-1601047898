@@ -1,0 +1,14 @@
+
+<%=form_with model: @heroinepower do | f |%>
+
+    <%=f.label :Heroine%>
+    <%=f.collection_select :heroine_id, @heroines, :id, :name , prompt: true %>
+    <br>
+    <%=f.label :dog%>
+    <%=f.collection_select :power_id, @powers, :id, :name  prompt: true %>
+    <br>
+    <%=f.label :strenght%>
+    <%=f.text_field :strenght%>
+    <br>
+    <%=f.submit%>
+    <%end%>

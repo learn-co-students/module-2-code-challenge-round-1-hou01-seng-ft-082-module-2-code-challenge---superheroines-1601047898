@@ -24,3 +24,7 @@ heroines = [
 ]
 
 heroines.each { |heroine| Heroine.create(heroine) }
+
+
+
+puts "we seeded"
