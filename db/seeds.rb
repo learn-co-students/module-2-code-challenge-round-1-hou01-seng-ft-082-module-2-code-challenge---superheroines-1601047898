@@ -24,3 +24,11 @@ heroines = [
 ]
 
 heroines.each { |heroine| Heroine.create(heroine) }
+
+20.times do 
+  HeroinePower.create(
+    heroine: Heroine.all.sample,
+    power: Power.all.sample,
+    strength: "Strong"
+    )
+  end

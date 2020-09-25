@@ -1,0 +1,13 @@
+<h1><%=@heroine.name%></h1>
+<h2>AKA:<%=" " + @heroine.super_name%></h2>
+<h3>Powers:</h3>
+<ul>
+<%@heroine.heroine_powers.each do |heroine_power|%>
+<li><%=heroine_power.name + " --> " + heroine_power.strength%></li>
+<%end%>
+</ul>
+
+
+
+<%=button_to "Add a power", new_heroine_power_path, method: :get%>
+<%=button_to "All Heroines", heroines_path, method: :get%>
