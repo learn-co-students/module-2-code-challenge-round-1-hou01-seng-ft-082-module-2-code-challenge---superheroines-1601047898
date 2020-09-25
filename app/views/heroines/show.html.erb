@@ -1,0 +1,21 @@
+<h1><%= @heroine.name %></h1>
+
+<h3>Super Name: <%= @heroine.name %></h3>
+
+
+<ul>
+  <% @heroine.heroine_powers.each do |pd| %>
+    <li>
+      <h3>Power: <%= link_to pd.power.name, power_path(pd.power) %></h3> 
+      <br>
+      Description: <%= pd.power.description %>
+      <br>
+      Strength: <%= pd.strength %>
+    </li>
+    <br>
+  <% end %>
+</ul>
+
+<%= link_to "Add a new power", new_heroine_power_path %>
+
+
