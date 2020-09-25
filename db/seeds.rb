@@ -1,11 +1,12 @@
 Heroine.destroy_all
 Power.destroy_all
+HeroinePower.destroy_all
 
 powers = [
-  {name: "super strength", description: "gives the wielder super-human strengths" },
-  {name: "flight", description: "gives the wielder the ability to fly through the skies at supersonic speed" },
-  {name: "super human senses", description: "allows the wielder to use her senses at a super-human level" },
-  {name: "elasticity", description: "can stretch the human body to extreme lengths" }
+  {name: "Super Strength", description: "gives the wielder super-human strengths" },
+  {name: "Flight", description: "gives the wielder the ability to fly through the skies at supersonic speed" },
+  {name: "Super Human Senses", description: "allows the wielder to use her senses at a super-human level" },
+  {name: "Elasticity", description: "can stretch the human body to extreme lengths" }
 ]
 
 powers.each {|power| Power.create(power)}
@@ -24,3 +25,13 @@ heroines = [
 ]
 
 heroines.each { |heroine| Heroine.create(heroine) }
+
+5.times do
+  HeroinePower.create(heroine_id: Heroine.all.sample.id, power_id: Power.all.sample.id, strength: "strong")
+end
+
+5.times do
+  HeroinePower.create(heroine_id: Heroine.all.sample.id, power_id: Power.all.sample.id, strength: "weak")
+end
+
+puts "I feel the power!"

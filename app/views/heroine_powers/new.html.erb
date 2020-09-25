@@ -1,0 +1,22 @@
+<h1>Give A Heroine A Power!</h1>
+
+<% if flash[:errors] %>
+    <% flash[:errors].each do |error|%>
+        <li style="color:red">
+            <%= error %>
+        </li>
+    <% end %>
+<% end %>
+
+<%= form_with model: @heroine_power do |f| %>
+
+    <%=f.collection_select :heroine_id, @heroines, :id, :super_name, {include_blank: 'Select Your Heroine!'} %>
+    <br>
+    <%=f.collection_select :power_id, @powers, :id, :name, {include_blank: 'Select a Power!'} %>
+    <br>
+    <%=f.label :strength %>
+    <%=f.text_field :strength%>
+    <br>
+    <%=f.submit %>
+
+<% end %>
