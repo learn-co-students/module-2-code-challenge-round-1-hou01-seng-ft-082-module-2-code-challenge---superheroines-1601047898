@@ -1,0 +1,7 @@
+<h1> <%=@heroine.super_name%> </h1>
+<h3> <%=@heroine.name%> </h3>
+
+<p><%@heroine.powers.each do |power|%>
+<%=link_to power.name.capitalize, power_path(power)%> - Strength: <%=power.power_strength%>
+<%end%>
+
