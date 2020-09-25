@@ -24,3 +24,10 @@ heroines = [
 ]
 
 heroines.each { |heroine| Heroine.create(heroine) }
+
+
+
+
+
+
+puts "yooooooo"
