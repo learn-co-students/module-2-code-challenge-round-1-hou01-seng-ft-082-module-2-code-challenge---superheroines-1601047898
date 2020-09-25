@@ -3,9 +3,11 @@
 <ul>
   <% @powers.each do |power| %>
     <li>
-      <%= power.name %>
+      <%= power.name %> <br><br> Owned By <%=power.heroines.count%> Heroine(s)
       <br>
       Description: <%= power.description %>
     </li>
   <% end %>
 </ul>
+
+
