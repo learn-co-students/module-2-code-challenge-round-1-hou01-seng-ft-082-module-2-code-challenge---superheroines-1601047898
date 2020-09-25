@@ -24,3 +24,5 @@ heroines = [
 ]
 
 heroines.each { |heroine| Heroine.create(heroine) }
+
+# Heroineassociation.create(heroine_id: 1, power_id: 1, strength: "Strong")
