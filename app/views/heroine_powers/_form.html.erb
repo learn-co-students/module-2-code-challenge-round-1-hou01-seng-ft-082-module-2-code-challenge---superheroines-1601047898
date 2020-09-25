@@ -1,0 +1,11 @@
+<h1> Heroine Power Create Page</h1>
+
+
+
+<%= form_with model: @heroinepower do |f|%>
+<%= f.collection_select :heroine_id, @heroines, :id, :name, {include_blank: 'Select a Heroine'} %>
+<%= f.collection_select :power_id, @powers, :id, :name, {include_blank: 'Select a Power'} %>
+<%= f.label :strength %>
+<%= f.text_field :strength %>
+<%= f.submit %>
+<%end%>
