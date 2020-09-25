@@ -1,0 +1,6 @@
+<h1><%=@heroine.name&></h1>
+
+<h2></h2><%=heroine.supername%></h2>
+
+<%=button_to "delete", {:controller => :heroines, 
+:action => 'destroy', :id => @heroine.id }, :method => :delete %>
