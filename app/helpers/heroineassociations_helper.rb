@@ -1,0 +1,2 @@
+module HeroineassociationsHelper
+end

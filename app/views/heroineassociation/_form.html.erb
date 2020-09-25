@@ -1,0 +1,14 @@
+<%= form_with model: @heroineassociations do |f| %>
+
+  <%=f.label :power_id %><br>
+  <%=f.collection_select :power_id, @powers, :id, :name %>
+
+  <%=f.label :heroine_id %><br>
+  <%=f.collection_select :heroine_id, @heroines, :id, :name %>
+
+  <%=f.label :strength %><br>
+  <%= f.text_field :strength %><br>
+ 
+  <br>
+  <%= f.submit %>
+<% end %>
