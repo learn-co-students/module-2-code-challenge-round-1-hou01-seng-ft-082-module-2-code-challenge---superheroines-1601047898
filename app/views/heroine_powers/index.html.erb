@@ -1,0 +1,13 @@
+<h2>All Heroine Powers</h2>
+
+<ul>
+  <%@heroine_powers.each do |heroinepower|%>
+    <li>
+      <%=link_to heroinepower.heroine.name, heroine_power_path(heroinepower)%>
+    </li>
+    <br>
+  <% end %>
+</ul>
+
+<h2>All Heroines</h2>
+
