@@ -2,7 +2,7 @@ class HeroinePower < ApplicationRecord
     belongs_to :heroine 
     belongs_to :power
 
-    validate(:strength_validation)
+    #validate(:strength_validation)
 
     # def strength_validation
     #     if self.strength != 'Strong' || 'Weak' || 'Average'
