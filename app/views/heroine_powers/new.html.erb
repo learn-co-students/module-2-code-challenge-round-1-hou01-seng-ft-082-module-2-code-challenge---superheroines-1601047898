@@ -1,0 +1,6 @@
+<%=form_with model: @heroine_powers do |f|%>
+<p>Input Strength Level (Strong, Weak, or Average): <%=f.text_field :strength%></p>
+<p>Select Heroine: <%=f.select :heroine_id, Heroine.all.map {|heroine| [heroine.super_name, heroine.id]}%></p>
+<p>Select Power: <%=f.select :power_id, Power.all.map {|power| [power.name, power.id]}%></p>
+<p><%=f.submit "Create Heroine Power"%></p>
+<%end%>
